@@ -1,3 +1,6 @@
+docker setup for 
+github.com/tfyre/bambu-farm - bambu farm project. 
+
 # Bambu Farm Docker Setup
 
 This repository contains Docker configuration files for running Bambu Farm, a web-based application for monitoring multiple Bambu Lab printers.
