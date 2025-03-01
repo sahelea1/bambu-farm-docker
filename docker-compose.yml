@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  bambu-farm:
+    build: .
+    container_name: bambu-farm
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data
+      - ./.env:/app/.env
+    environment:
+      - TZ=UTC
+    networks:
+      - bambu-network
+
+  # Optional: Uncomment to include the LiveView service for X1C cameras
+  # bambu-liveview:
+  #   image: ghcr.io/tfyre/bambu-liveview:latest
+  #   container_name: bambu-liveview
+  #   restart: unless-stopped
+  #   ports:
+  #     - "8090:8090"
+  #   environment:
+  #     - TZ=UTC
+  #   networks:
+  #     - bambu-network
+
+networks:
+  bambu-network:
+    driver: bridge
