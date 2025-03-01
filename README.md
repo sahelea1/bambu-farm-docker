@@ -6,7 +6,7 @@ This repository contains Docker configuration files for running Bambu Farm, a we
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/bambu-farm-docker.git
+   git clone https://github.com/sahelea1/bambu-farm-docker.git
    cd bambu-farm-docker
    ```
 
